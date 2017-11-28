@@ -88,15 +88,3 @@ export function makeElement<K extends keyof HTMLElementTagNameMap>(
 
     return el;
 }
-
-export function a(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLAnchorElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLAnchorElement { return makeElement("a", textOrPropsOrChild, ...args); }
-export function button(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLButtonElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLButtonElement { return makeElement("button", textOrPropsOrChild, ...args); }
-export function div(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLDivElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLDivElement { return makeElement("div", textOrPropsOrChild, ...args); }
-export function table(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLTableElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLTableElement { return makeElement("table", textOrPropsOrChild, ...args); }
-export function tr(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLTableRowElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLTableRowElement { return makeElement("tr", textOrPropsOrChild, ...args); }
-export function td(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLTableCellElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLTableCellElement { return makeElement("td", textOrPropsOrChild, ...args); }
-export function span(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLSpanElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLSpanElement { return makeElement("span", textOrPropsOrChild, ...args); }
-export function p(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLParagraphElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLParagraphElement { return makeElement("p", textOrPropsOrChild, ...args); }
-export function hn(level: "h1"|"h2"|"h3"|"h4"|"h5"|"h6", textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLHeadingElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLHeadingElement { return makeElement(level, textOrPropsOrChild, ...args); }
-export function img(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLImageElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLImageElement { return makeElement("img", textOrPropsOrChild, ...args); }
-export function video(textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLVideoElement>|HTMLElement|HTMLElement[], ...args: (HTMLElement|string)[]): HTMLVideoElement { return makeElement("video", textOrPropsOrChild, ...args); }

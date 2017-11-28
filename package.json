@@ -2,7 +2,7 @@
   "name": "elementr",
   "version": "1.0.0",
   "description": "\"Convenience framework for assembling and styling a tree of HTML Elements. Derived from work by Hackernoon.\"",
-  "main": "dist/index.js",
+  "main": "lib/elementr.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
