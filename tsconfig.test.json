@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+    "outDir": "./testout",                        /* Redirect output structure to the directory. */
+    "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "removeComments": false,                /* Do not emit comments to output. */
+  },
+  "exclude": [
+    "src",
+    "node_modules",
+    "lib",
+    "testout"
+  ]
+}

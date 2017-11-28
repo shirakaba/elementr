@@ -1,3 +1,4 @@
 .vscode
 .test
-dist
+lib
+testout
