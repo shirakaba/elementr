@@ -1,0 +1,29 @@
+{
+  "name": "elementr",
+  "version": "1.0.0",
+  "description": "\"Convenience framework for assembling and styling a tree of HTML Elements. Derived from work by Hackernoon.\"",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shirakaba/elementr.git"
+  },
+  "keywords": [
+    "HTML",
+    "DOM",
+    "element",
+    "UI",
+    "framework"
+  ],
+  "author": "Jamie Birch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shirakaba/elementr/issues"
+  },
+  "homepage": "https://github.com/shirakaba/elementr#readme",
+  "devDependencies": {
+    "typescript": "^2.6.2"
+  }
+}
