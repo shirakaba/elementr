@@ -66,12 +66,12 @@ export type HTMLElementWithPartialStyles<T extends HTMLElement> = Partial<T> | P
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, subElement?: HTMLElement, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, htmlProperty?: Partial<HTMLElementTagNameMap[K]>, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, textContent?: string, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
-export function makeElement<K extends keyof HTMLElementTagNameMap, L extends keyof AllHTMLElementsInElementTagNameMap>(
-    elementType: K|L,
-    textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>|HTMLElementWithPartialStyles<ElementTagNameMap[L]>|HTMLElement|HTMLElement[],
+export function makeElement<K extends keyof (HTMLElementTagNameMap|AllHTMLElementsInElementTagNameMap)>(
+    elementType: K,
+    textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>|HTMLElementWithPartialStyles<ElementTagNameMap[K]>|HTMLElement|HTMLElement[],
     ...otherChildren: (HTMLElement|string)[]
 )
-: HTMLElementTagNameMap[K]|ElementTagNameMap[L]
+: ElementTagNameMap[K]|HTMLElementTagNameMap[K]
 {
     const el = document.createElement(elementType);
 
