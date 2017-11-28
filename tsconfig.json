@@ -15,7 +15,7 @@
 
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
     "outDir": "./lib",                        /* Redirect output structure to the directory. */
-    // "rootDir": "./src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "rootDir": "./src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     "removeComments": true,                /* Do not emit comments to output. */
     // "noEmit": true,                        /* Do not emit outputs. */
     // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
@@ -57,6 +57,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
   },
   "exclude": [
+    "test",
     "node_modules", // so as not to accidentally pull in any .ts(x) files from node_modules (eg. 'react-babel-karma-gulp-happypack').
     "dist"          // To prevent "Cannot write file ... as it would overwrite the file" error: https://github.com/Microsoft/TypeScript/issues/14538
   ]
