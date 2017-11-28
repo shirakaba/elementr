@@ -1,7 +1,7 @@
-import {HTMLElementWithPartialStyles, makeElement} from "../src/elementr/core/index";
-import {div} from "../src/elementr/aliases/index";
+import {HTMLElementWithPartialStyles, makeElement} from "../lib/elementr/core/index";
+import {div} from "../lib/elementr/aliases/index";
 
-import {span, styleHTMLElement} from "../src/elementr";
+import {span, styleHTMLElement} from "../lib/elementr";
 
 // imported from submodules:
 //   div(), makeElement(), HTMLElementWithPartialStyles

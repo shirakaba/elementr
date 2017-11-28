@@ -1,8 +1,9 @@
 {
   "extends": "./tsconfig.common.json",
   "compilerOptions": {
+    "declaration": false,
     "outDir": "./testout",                        /* Redirect output structure to the directory. */
-    "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "rootDir": "./test",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     "removeComments": false,                /* Do not emit comments to output. */
   },
   "exclude": [
