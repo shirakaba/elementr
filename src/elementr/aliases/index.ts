@@ -3,18 +3,6 @@ import { makeElement, HTMLElementWithPartialStyles } from "../core/index";
 export type TextOrChild = string|HTMLElement;
 export type TextOrChildOrChildren = TextOrChild|HTMLElement[];
 
-// export function a(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLAnchorElement>, ...args: TextOrChild[]): HTMLAnchorElement { return makeElement("a", textOrPropsOrChild, ...args); }
-// export function button(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLButtonElement>, ...args: TextOrChild[]): HTMLButtonElement { return makeElement("button", textOrPropsOrChild, ...args); }
-// export function div(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLDivElement>, ...args: TextOrChild[]): HTMLDivElement { return makeElement("div", textOrPropsOrChild, ...args); }
-// export function table(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLTableElement>, ...args: TextOrChild[]): HTMLTableElement { return makeElement("table", textOrPropsOrChild, ...args); }
-// export function tr(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLTableRowElement>, ...args: TextOrChild[]): HTMLTableRowElement { return makeElement("tr", textOrPropsOrChild, ...args); }
-// export function td(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLTableCellElement>, ...args: TextOrChild[]): HTMLTableCellElement { return makeElement("td", textOrPropsOrChild, ...args); }
-// export function span(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLSpanElement>, ...args: TextOrChild[]): HTMLSpanElement { return makeElement("span", textOrPropsOrChild, ...args); }
-// export function p(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLParagraphElement>, ...args: TextOrChild[]): HTMLParagraphElement { return makeElement("p", textOrPropsOrChild, ...args); }
-// export function hn(level: "h1"|"h2"|"h3"|"h4"|"h5"|"h6", textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLHeadingElement>, ...args: TextOrChild[]): HTMLHeadingElement { return makeElement(level, textOrPropsOrChild, ...args); }
-// export function img(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLImageElement>, ...args: TextOrChild[]): HTMLImageElement { return makeElement("img", textOrPropsOrChild, ...args); }
-// export function video(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLVideoElement>, ...args: TextOrChild[]): HTMLVideoElement { return makeElement("video", textOrPropsOrChild, ...args); }
-
 // From: HTMLElementTagNameMap
 export function a(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLAnchorElement>, ...args: TextOrChild[]): HTMLAnchorElement { return makeElement("a", textOrPropsOrChild, ...args); }
 export function applet(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLAppletElement>, ...args: TextOrChild[]): HTMLAppletElement { return makeElement("applet", textOrPropsOrChild, ...args); }
