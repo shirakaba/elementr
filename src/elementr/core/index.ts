@@ -49,7 +49,7 @@ export interface PartialStyles {
     style: Partial<CSSStyleDeclaration>;
 }
 
-export type HTMLElementWithPartialStyles<T extends HTMLElement> = Partial<T> | PartialStyles;
+export type HTMLElementWithPartialStyles<T extends HTMLElement> = Partial<T> | PartialStyles; //| Partial<AllHTMLElementsInElementTagNameMap>;
 
 // Because the nested "style: CSSStyleDeclaration;" property needs to be expressed as Partial, too.
 // From: https://stackoverflow.com/a/41980288/5951226
@@ -66,12 +66,12 @@ export type HTMLElementWithPartialStyles<T extends HTMLElement> = Partial<T> | P
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, subElement?: HTMLElement, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, htmlProperty?: Partial<HTMLElementTagNameMap[K]>, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, textContent?: string, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
-export function makeElement<K extends keyof (HTMLElementTagNameMap|AllHTMLElementsInElementTagNameMap)>(
-    elementType: K,
-    textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>|HTMLElementWithPartialStyles<ElementTagNameMap[K]>|HTMLElement|HTMLElement[],
+export function makeElement<K extends keyof HTMLElementTagNameMap>(
+    elementType: K|AllHTMLElementKeysInElementTagNameMap,
+    textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>|HTMLElementWithPartialStyles<ElementTagNameMap[AllHTMLElementKeysInElementTagNameMap]>|HTMLElement|HTMLElement[],
     ...otherChildren: (HTMLElement|string)[]
 )
-: ElementTagNameMap[K]|HTMLElementTagNameMap[K]
+: ElementTagNameMap[AllHTMLElementKeysInElementTagNameMap]|HTMLElementTagNameMap[K]
 {
     const el = document.createElement(elementType);
 
@@ -83,7 +83,7 @@ export function makeElement<K extends keyof (HTMLElementTagNameMap|AllHTMLElemen
         } else if (typeof textOrPropsOrChild === "string"){
             appendText(el, textOrPropsOrChild as string);
         } else if (typeof textOrPropsOrChild === "object"){
-            styleHTMLElement(el, textOrPropsOrChild);
+            styleHTMLElement(el, textOrPropsOrChild as any);
         }
     }
 
