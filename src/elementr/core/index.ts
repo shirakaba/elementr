@@ -42,8 +42,8 @@ export function styleHTMLElement<E extends HTMLElement>(el: E, props: HTMLElemen
     return el;
 }
 
-export type AllHTMLElementKeysInElementTagNameMap = "abbr"|"acronym"|"address"|"article"|"aside"|"b"|"bdo"|"big"|"center"|"cite"|"code"|"dd"|"dfn"|"dt"|"em"|"figcaption"|"figure"|"footer"|"header"|"hgroup"|"i"|"kbd"|"keygen"|"mark"|"nav"|"nobr"|"noframes"|"noscript"|"plaintext"|"rt"|"ruby"|"s"|"samp"|"section"|"small"|"strike"|"strong"|"sub"|"sup"|"tt"|"u"|"var"|"wbr";
-export type AllHTMLElementsInElementTagNameMap = Pick<ElementTagNameMap, AllHTMLElementKeysInElementTagNameMap>;
+// export type AllHTMLElementKeysInElementTagNameMap = "abbr"|"acronym"|"address"|"article"|"aside"|"b"|"bdo"|"big"|"center"|"cite"|"code"|"dd"|"dfn"|"dt"|"em"|"figcaption"|"figure"|"footer"|"header"|"hgroup"|"i"|"kbd"|"keygen"|"mark"|"nav"|"nobr"|"noframes"|"noscript"|"plaintext"|"rt"|"ruby"|"s"|"samp"|"section"|"small"|"strike"|"strong"|"sub"|"sup"|"tt"|"u"|"var"|"wbr";
+// export type AllHTMLElementsInElementTagNameMap = Pick<ElementTagNameMap, AllHTMLElementKeysInElementTagNameMap>;
 
 export interface PartialStyles {
     style: Partial<CSSStyleDeclaration>;
@@ -67,11 +67,11 @@ export type HTMLElementWithPartialStyles<T extends HTMLElement> = Partial<T> | P
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, htmlProperty?: Partial<HTMLElementTagNameMap[K]>, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, textContent?: string, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
 export function makeElement<K extends keyof HTMLElementTagNameMap>(
-    elementType: K|AllHTMLElementKeysInElementTagNameMap,
-    textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>|HTMLElementWithPartialStyles<ElementTagNameMap[AllHTMLElementKeysInElementTagNameMap]>|HTMLElement|HTMLElement[],
+    elementType: K,
+    textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>|HTMLElement|HTMLElement[],
     ...otherChildren: (HTMLElement|string)[]
 )
-: ElementTagNameMap[AllHTMLElementKeysInElementTagNameMap]|HTMLElementTagNameMap[K]
+: HTMLElementTagNameMap[K]
 {
     const el = document.createElement(elementType);
 
