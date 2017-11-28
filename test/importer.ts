@@ -4,7 +4,7 @@ import {div} from "../src/elementr/aliases/index";
 import {span, styleHTMLElement} from "../src/elementr";
 
 // imported from submodules:
-//   div(), makeElement()
+//   div(), makeElement(), HTMLElementWithPartialStyles
 const divProps: HTMLElementWithPartialStyles<HTMLDivElement> = { id: "myDiv", style: { position: "absolute" }};
 const myDiv1: HTMLDivElement = makeElement('div', divProps);
 const myDiv2: HTMLDivElement = div(divProps);
