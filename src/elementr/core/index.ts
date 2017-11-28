@@ -42,6 +42,9 @@ export function styleHTMLElement<E extends HTMLElement>(el: E, props: HTMLElemen
     return el;
 }
 
+export type TextOrChild = string|HTMLElement;
+export type TextOrChildOrChildren = TextOrChild|HTMLElement[];
+
 // export type AllHTMLElementKeysInElementTagNameMap = "abbr"|"acronym"|"address"|"article"|"aside"|"b"|"bdo"|"big"|"center"|"cite"|"code"|"dd"|"dfn"|"dt"|"em"|"figcaption"|"figure"|"footer"|"header"|"hgroup"|"i"|"kbd"|"keygen"|"mark"|"nav"|"nobr"|"noframes"|"noscript"|"plaintext"|"rt"|"ruby"|"s"|"samp"|"section"|"small"|"strike"|"strong"|"sub"|"sup"|"tt"|"u"|"var"|"wbr";
 // export type AllHTMLElementsInElementTagNameMap = Pick<ElementTagNameMap, AllHTMLElementKeysInElementTagNameMap>;
 
@@ -68,8 +71,8 @@ export type HTMLElementWithPartialStyles<T extends HTMLElement> = Partial<T> | P
 // export function makeElement<K extends keyof HTMLElementTagNameMap>(elementType: K, textContent?: string, ...otherChildren: (HTMLElement|string)[]): HTMLElementTagNameMap[K];
 export function makeElement<K extends keyof HTMLElementTagNameMap>(
     elementType: K,
-    textOrPropsOrChild?: string|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>|HTMLElement|HTMLElement[],
-    ...otherChildren: (HTMLElement|string)[]
+    textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLElementTagNameMap[K]>,
+    ...otherChildren: TextOrChild[]
 )
 : HTMLElementTagNameMap[K]
 {

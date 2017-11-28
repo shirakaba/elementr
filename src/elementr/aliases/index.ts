@@ -1,7 +1,4 @@
-import { makeElement, HTMLElementWithPartialStyles } from "../core/index";
-
-export type TextOrChild = string|HTMLElement;
-export type TextOrChildOrChildren = TextOrChild|HTMLElement[];
+import { makeElement, HTMLElementWithPartialStyles, TextOrChild, TextOrChildOrChildren } from "../core/index";
 
 // From: HTMLElementTagNameMap
 export function a(textOrPropsOrChild?: TextOrChildOrChildren|HTMLElementWithPartialStyles<HTMLAnchorElement>, ...args: TextOrChild[]): HTMLAnchorElement { return makeElement("a", textOrPropsOrChild, ...args); }
